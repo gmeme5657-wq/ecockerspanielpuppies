@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact eCockerSpanielPuppies. Get in touch via email, phone, WhatsApp, or contact form to inquire about and reserve your premium puppy.">
+  <meta name="keywords" content="Contact us, puppy inquiry, reserve puppy, get in touch, contact form">
+  <meta name="author" content="eCockerSpanielPuppies">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#d4af37">
+  <meta name="color-scheme" content="light">
+  <meta property="og:title" content="Contact Us - eCockerSpanielPuppies">
+  <meta property="og:description" content="Contact us to inquire about our English Cocker Spaniel puppies. Multiple ways to reach us for your convenience.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.ecockerspanielpuppies.com/contact.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Google Ads and SEO Meta Tags -->
+  <meta name="google-site-verification" content="">
+  <meta name="google-adsbot-google" content="noindex">
+  <meta name="target-audience" content="puppy buyers, pet lovers, dog enthusiasts">
+  <meta name="rating" content="general">
+  <meta property="og:image" content="">
+  <meta name="msvalidate.01" content="">
+  <!-- Google Ads: Ad Network Policies -->
+  <meta name="format-detection" content="telephone=no">
+  <meta property="fb:app_id" content="">
+  <!-- Google Analytics & Conversion Tracking (Optional - add your tracking ID) -->
+  <meta name="google-analytics" content="">
+  <!-- Additional SEO Tags for Google Ads Quality Score -->
+  <meta name="language" content="en-US">
+  <meta name="distribution" content="global">
+  <meta name="revisit-after" content="7 days">
+  <title>Contact Us - eCockerSpanielPuppies</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============================================================================
+  NAVIGATION BAR
+  ============================================================================ -->
+<nav>
+  <div class="nav-container">
+    <div class="logo">e<span>Cocker</span>Puppies</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="puppies.html">Puppies</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="delivery.html">Delivery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================================
+  MAIN CONTENT
+  ============================================================================ -->
+<main>
+
+<!-- ============================================================================
+  PAGE HEADER / HERO SECTION
+  ============================================================================ -->
+<section class="hero-section">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Get In Touch</h1>
+    <p class="subtitle">We're Here to Help & Answer Your Questions</p>
+  </div>
+</section>
+
+<!-- ============================================================================
+  CONTACT INFORMATION
+  ============================================================================ -->
+<section>
+  <div class="container">
+    <div class="grid grid-3">
+      <div class="card fade-in" style="text-align: center;">
+        <div style="padding: 2rem;">
+          <div style="font-size: 3rem; margin-bottom: 1rem; color: var(--primary-gold);">📞</div>
+          <h4 style="margin-bottom: 1rem;">Phone</h4>
+          <a href="tel:+12252052770" style="font-size: 1.1rem; font-weight: 600; color: var(--primary-gold);">+1 225 205 2770</a>
+          <p style="margin-top: 0.5rem; font-size: 0.9rem;">Available for calls and questions</p>
+        </div>
+      </div>
+
+      <div class="card fade-in" style="text-align: center;">
+        <div style="padding: 2rem;">
+          <div style="font-size: 3rem; margin-bottom: 1rem; color: var(--primary-gold);">✉️</div>
+          <h4 style="margin-bottom: 1rem;">Email</h4>
+          <a href="mailto:martinvictor61rag@gmail.com" style="font-size: 1.1rem; font-weight: 600; color: var(--primary-gold); word-break: break-all;">martinvictor61rag@gmail.com</a>
+          <p style="margin-top: 0.5rem; font-size: 0.9rem;">Response within 24 hours</p>
+        </div>
+      </div>
+
+      <div class="card fade-in" style="text-align: center;">
+        <div style="padding: 2rem;">
+          <div style="font-size: 3rem; margin-bottom: 1rem; color: var(--primary-gold);">💬</div>
+          <h4 style="margin-bottom: 1rem;">WhatsApp</h4>
+          <a href="https://wa.me/12252052770" target="_blank" style="font-size: 1.1rem; font-weight: 600; color: var(--primary-gold);">Start Chat</a>
+          <p style="margin-top: 0.5rem; font-size: 0.9rem;">Quick messaging & support</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================================
+  CONTACT FORM & INFO
+  ============================================================================ -->
+<section style="background-color: var(--primary-beige);">
+  <div class="container">
+    <div class="grid grid-2" style="gap: 3rem; align-items: flex-start;">
+      
+      <!-- Contact Form -->
+      <div>
+        <h2 style="margin-bottom: 2rem;">Send us a Message</h2>
+        
+        <!-- Notification Container for Success/Error Messages -->
+        <div id="notification" class="notification" style="display: none;"></div>
+        
+        <form id="contactForm" novalidate style="background-color: white; padding: 2rem; border-radius: 12px; box-shadow: var(--shadow-soft);" data-email="martinvictor61rag@gmail.com">
+          <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="name" required placeholder="John Doe" data-validate="required">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required placeholder="john@example.com" data-validate="required,email">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" data-validate="phone">
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject *</label>
+            <select id="subject" name="subject" required data-validate="required">
+              <option value="">Select a topic...</option>
+              <option value="puppy-inquiry">Puppy Inquiry</option>
+              <option value="reserve-puppy">Reserve a Puppy</option>
+              <option value="health-question">Health Question</option>
+              <option value="delivery-info">Delivery Information</option>
+              <option value="general-question">General Question</option>
+              <option value="support">Lifetime Support</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required placeholder="Tell us what you'd like to know..." data-validate="required"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="submitBtn" style="width: 100%;">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Info & Social -->
+      <div>
+        <h2 style="margin-bottom: 2rem;">Additional Information</h2>
+        
+        <div class="card" style="margin-bottom: 1.5rem;">
+          <div style="padding: 1.5rem; background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), transparent);">
+            <h4 style="color: var(--primary-gold); margin-bottom: 1rem;">💼 Business Hours</h4>
+            <p style="margin-bottom: 0.5rem;"><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</p>
+            <p style="margin-bottom: 0.5rem;"><strong>Saturday:</strong> 10:00 AM - 4:00 PM</p>
+            <p><strong>Sunday:</strong> By appointment</p>
+            <p style="font-size: 0.9rem; margin-top: 1rem; color: var(--text-light);">
+              Emergency support available 24/7 for our puppy families.
+            </p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-bottom: 1.5rem;">
+          <div style="padding: 1.5rem; background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), transparent);">
+            <h4 style="color: var(--primary-gold); margin-bottom: 1rem;">🌐 Connect With Us</h4>
+            <p style="margin-bottom: 1.5rem;">Follow us on social media for updates and puppy photos!</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="https://www.facebook.com/share/18aVwxMUSc/?mibextid=wwXIfr" target="_blank" class="btn btn-secondary" style="flex: 1; min-width: 120px; text-align: center;">
+                Facebook
+              </a>
+              <a href="https://www.instagram.com/ecockerSpanielpuppies" target="_blank" class="btn btn-secondary" style="flex: 1; min-width: 120px; text-align: center;">
+                Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="padding: 1.5rem; background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), transparent);">
+            <h4 style="color: var(--primary-gold); margin-bottom: 1rem;">📍 Location</h4>
+            <p style="margin-bottom: 1rem;">
+              We operate nationwide, providing delivery across the USA and internationally.
+            </p>
+            <p style="font-size: 0.9rem; color: var(--text-light);">
+              Puppies can be delivered to your location or you can arrange a pickup. Contact us for specific details!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================================
+  FAQ CONTACT SECTION
+  ============================================================================ -->
+<section>
+  <div class="container">
+    <h2 style="text-align: center; margin-bottom: 3rem;">Common Questions</h2>
+    
+    <div style="max-width: 700px; margin: 0 auto;">
+      <div class="accordion">
+        <div class="accordion-header">
+          How quickly will you respond to my message?
+          <span class="icon">▼</span>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            We aim to respond to all inquiries within 24 hours. During business hours, we usually respond much faster! For urgent matters, call us directly or use WhatsApp for immediate contact.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Can I schedule a video call to see the puppies?
+          <span class="icon">▼</span>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            Absolutely! We offer video consultations so you can meet your potential puppy before purchase. Contact us to schedule a video call at a convenient time for both of us.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          What's the best way to contact you?
+          <span class="icon">▼</span>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            The fastest method is WhatsApp or a direct call. For detailed questions, email works great. Our contact form also works well for inquiries you'd like us to consider carefully.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Do you offer consultations before purchase?
+          <span class="icon">▼</span>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            Yes! We encourage consultations. We want to make sure each puppy goes to the right home. Feel free to ask us anything about a specific puppy, care requirements, or our breeding program.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Can I get updates after I reserve a puppy?
+          <span class="icon">▼</span>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-content">
+            Of course! After you reserve a puppy, we'll send you regular updates including photos, videos, and developmental milestones. You'll be part of your puppy's journey from day one!
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================================
+  TESTIMONIALS
+  ============================================================================ -->
+<section style="background-color: var(--primary-beige);">
+  <div class="container">
+    <h2 style="text-align: center; margin-bottom: 3rem;">What Customers Say About Us</h2>
+    <div class="grid grid-2">
+      <div class="testimonial-card slide-in">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="testimonial-text">"The communication was exceptional. They answered all my questions and even sent video updates of my puppy before delivery. Highly professional!"</p>
+        <p class="testimonial-author">— Rachel Gibson, Ohio</p>
+      </div>
+
+      <div class="testimonial-card slide-in">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="testimonial-text">"Every detail was perfect. They even called to check in after my puppy arrived. This is customer service done right!"</p>
+        <p class="testimonial-author">— Tom Wilson, Pennsylvania</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================================
+  DIRECT CONTACT CARDS
+  ============================================================================ -->
+<section>
+  <div class="container">
+    <h2 style="text-align: center; margin-bottom: 3rem;">Get In Touch Now</h2>
+    <div class="grid grid-3" style="max-width: 800px; margin: 0 auto;">
+      <a href="mailto:martinvictor61rag@gmail.com" class="card" style="text-decoration: none; cursor: pointer; transition: all 0.3s ease;">
+        <div style="padding: 2rem; text-align: center;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">✉️</div>
+          <h4 style="color: var(--primary-gold); margin-bottom: 0.5rem;">Email</h4>
+          <p style="font-size: 0.9rem; color: var(--text-light);">Contact via email</p>
+        </div>
+      </a>
+
+      <a href="tel:+12252052770" class="card" style="text-decoration: none; cursor: pointer; transition: all 0.3s ease;">
+        <div style="padding: 2rem; text-align: center;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">📞</div>
+          <h4 style="color: var(--primary-gold); margin-bottom: 0.5rem;">Call Us</h4>
+          <p style="font-size: 0.9rem; color: var(--text-light);">Direct phone call</p>
+        </div>
+      </a>
+
+      <a href="https://wa.me/12252052770" class="card" target="_blank" style="text-decoration: none; cursor: pointer; transition: all 0.3s ease;">
+        <div style="padding: 2rem; text-align: center;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">💬</div>
+          <h4 style="color: var(--primary-gold); margin-bottom: 0.5rem;">WhatsApp</h4>
+          <p style="font-size: 0.9rem; color: var(--text-light);">Quick chat support</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================================
+  CTA SECTION
+  ============================================================================ -->
+<section style="background: linear-gradient(135deg, var(--primary-beige), rgba(212, 175, 55, 0.1));">
+  <div class="container" style="text-align: center;">
+    <h2>Ready to Start Your Puppy Journey?</h2>
+    <p style="font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+      Contact us today to learn about available puppies and reserve your perfect companion!
+    </p>
+    <a href="puppies.html" class="btn btn-primary">Browse Our Puppies</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================================
+  FOOTER
+  ============================================================================ -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>eCockerSpanielPuppies</h4>
+        <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 1rem;">
+          Premium English Cocker Spaniel puppies, AKC registered and health guaranteed.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/share/18aVwxMUSc/?mibextid=wwXIfr" class="social-icon" target="_blank" title="Facebook">f</a>
+          <a href="https://www.instagram.com/ecockerSpanielpuppies" class="social-icon" target="_blank" title="Instagram">📷</a>
+          <a href="https://wa.me/12252052770" class="social-icon" target="_blank" title="WhatsApp">💬</a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="puppies.html">Available Puppies</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="delivery.html">Delivery Info</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <ul class="footer-links">
+          <li>
+            <a href="tel:+12252052770">📞 +1 225 205 2770</a>
+          </li>
+          <li>
+            <a href="mailto:martinvictor61rag@gmail.com">✉️ martinvictor61rag@gmail.com</a>
+          </li>
+          <li>
+            <a href="https://wa.me/12252052770" target="_blank">💬 WhatsApp</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Information</h4>
+        <ul class="footer-links">
+          <li><a href="delivery.html">Delivery Policy</a></li>
+          <li><a href="delivery.html">Health Guarantee</a></li>
+          <li><a href="delivery.html">Refund Policy</a></li>
+          <li><a href="about.html">Our Story</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 eCockerSpanielPuppies. All rights reserved. | AKC Registered Breeder | Health Guaranteed | Lifetime Support</p>
+    </div>
+  </div>
+</footer>
+
+<!-- EmailJS Library with Local Testing Fallback -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/emailjs-com/3.2.0/email.min.js"></script>
+<script>
+  // If on localhost, use mock library for testing
+  if (typeof emailjs === 'undefined' && (location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
+    console.log('ℹ️  Loading EmailJS Mock for local testing...');
+    var mockScript = document.createElement('script');
+    mockScript.src = 'js/emailjs-mock.js';
+    document.head.appendChild(mockScript);
+  }
+  // Fallback CDN if primary fails
+  else if (typeof emailjs === 'undefined') {
+    console.log('ℹ️  Loading EmailJS from secondary CDN...');
+    var s = document.createElement('script');
+    s.src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/index.min.js";
+    document.head.appendChild(s);
+  }
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>
