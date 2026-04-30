@@ -115,6 +115,79 @@ function initializeGalleries() {
   });
 }
 
+// ============================================================================
+// LOAD PUPPIES FROM JSON
+// ============================================================================
+
+/**
+ * Fetches puppies data from /data/puppies.json
+ * @returns {Promise<Array>} Array of puppy objects
+ */
+async function loadPuppies() {
+  try {
+    const response = await fetch('/data/puppies.json');
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    return data.puppies || [];
+  } catch (error) {
+    console.error('Error loading puppies:', error);
+    return [];
+  }
+}
+
+/**
+ * Renders puppy cards dynamically from JSON data
+ * @param {Array} puppies - Array of puppy objects
+ */
+function renderPuppyCards(puppies) {
+  const container = document.getElementById('puppies-grid');
+  if (!container) return;
+
+  container.innerHTML = '';
+
+  puppies.forEach(puppy => {
+    const galleryImages = (puppy.gallery || [puppy.image]).join(',');
+    const tagsHTML = (puppy.tags || [])
+      .map(tag => `<span class="tag ${tag === 'Vet Checked' ? 'premium' : ''}">${tag}</span>`)
+      .join('');
+
+    const puppyCard = document.createElement('div');
+    puppyCard.className = 'puppy-card slide-in';
+    puppyCard.dataset.images = galleryImages;
+    puppyCard.innerHTML = `
+      <div class="puppy-image-container">
+        <img src="${puppy.image}" alt="${puppy.name} - ${puppy.gender} Cocker Spaniel" class="puppy-image">
+        <div class="gallery-nav">
+          <button class="gallery-btn gallery-prev">❮</button>
+          <button class="gallery-btn gallery-next">❯</button>
+        </div>
+        <div class="image-nav"></div>
+      </div>
+      <div class="puppy-info">
+        <div class="puppy-header">
+          <div class="puppy-name">${puppy.name}</div>
+          <div class="puppy-price">${puppy.price}</div>
+        </div>
+        <div class="puppy-details">
+          <div class="puppy-detail"><strong>Age:</strong> ${puppy.age}</div>
+          <div class="puppy-detail"><strong>Gender:</strong> ${puppy.gender}</div>
+        </div>
+        <div class="puppy-tags">
+          ${tagsHTML}
+        </div>
+        <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">available</a>
+      </div>
+    `;
+
+    container.appendChild(puppyCard);
+
+    // Initialize gallery for this card
+    new ImageGallery(puppyCard);
+  });
+}
+
 // Lightbox Controls
 const lightbox = document.getElementById('lightbox');
 const lightboxClose = document.querySelector('.lightbox-close');
@@ -674,8 +747,17 @@ function initializeScrollAnimations() {
 // INITIALIZATION
 // ============================================================================
 
-document.addEventListener('DOMContentLoaded', () => {
-  initializeGalleries();
+document.addEventListener('DOMContentLoaded', async () => {
+  // Load puppies from JSON if container exists
+  const puppiesGrid = document.getElementById('puppies-grid');
+  if (puppiesGrid) {
+    const puppies = await loadPuppies();
+    renderPuppyCards(puppies);
+  } else {
+    // Fall back to existing galleries on pages without puppies-grid
+    initializeGalleries();
+  }
+
   initializeAccordions();
   initializeForm();
   initializeReserveButtons();

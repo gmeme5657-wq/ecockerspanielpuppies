@@ -25,6 +25,8 @@
   <meta name="revisit-after" content="7 days">
   <title>eCockerSpanielPuppies - Premium English Cocker Spaniel Puppies</title>
   <link rel="stylesheet" href="css/style.css">
+  <!-- Netlify Identity Widget for Admin Authentication -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
@@ -109,87 +111,9 @@
 <section style="background-color: var(--primary-beige);">
   <div class="container">
     <h2 style="text-align: center; margin-bottom: 3rem;">Featured Puppies</h2>
-    <div class="grid grid-3">
-      <!-- Jasper -->
-      <div class="puppy-card slide-in" data-images="images/jasper-1.jpg,images/jasper-2.jpg,images/jasper-3.jpg">
-        <div class="puppy-image-container">
-          <img src="images/jasper-1.jpg" alt="Jasper - Male Cocker Spaniel" class="puppy-image">
-          <div class="gallery-nav">
-            <button class="gallery-btn gallery-prev">❮</button>
-            <button class="gallery-btn gallery-next">❯</button>
-          </div>
-          <div class="image-nav"></div>
-        </div>
-        <div class="puppy-info">
-          <div class="puppy-header">
-            <div class="puppy-name">Jasper</div>
-            <div class="puppy-price">$800</div>
-          </div>
-          <div class="puppy-details">
-            <div class="puppy-detail"><strong>Age:</strong> 7 weeks</div>
-            <div class="puppy-detail"><strong>Gender:</strong> Male</div>
-          </div>
-          <div class="puppy-tags">
-            <span class="tag premium">Vet Checked</span>
-            <span class="tag">Family Raised</span>
-          </div>
-          <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">available</a>
-        </div>
-      </div>
-
-      <!-- Lilo -->
-      <div class="puppy-card slide-in" data-images="images/lilo-1.jpg,images/lilo-2.jpg,images/lilo-3.jpg">
-        <div class="puppy-image-container">
-          <img src="images/lilo-1.jpg" alt="Lilo - Female Cocker Spaniel" class="puppy-image">
-          <div class="gallery-nav">
-            <button class="gallery-btn gallery-prev">❮</button>
-            <button class="gallery-btn gallery-next">❯</button>
-          </div>
-          <div class="image-nav"></div>
-        </div>
-        <div class="puppy-info">
-          <div class="puppy-header">
-            <div class="puppy-name">Lilo</div>
-            <div class="puppy-price">$800</div>
-          </div>
-          <div class="puppy-details">
-            <div class="puppy-detail"><strong>Age:</strong> 6 weeks</div>
-            <div class="puppy-detail"><strong>Gender:</strong> Female</div>
-          </div>
-          <div class="puppy-tags">
-            <span class="tag premium">Vet Checked</span>
-            <span class="tag">Family Raised</span>
-          </div>
-          <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">available</a>
-        </div>
-      </div>
-
-      <!-- Max -->
-      <div class="puppy-card slide-in" data-images="images/max-1.jpg,images/max-2.jpg,images/max-3.jpg">
-        <div class="puppy-image-container">
-          <img src="images/max-1.jpg" alt="Max - Male Cocker Spaniel" class="puppy-image">
-          <div class="gallery-nav">
-            <button class="gallery-btn gallery-prev">❮</button>
-            <button class="gallery-btn gallery-next">❯</button>
-          </div>
-          <div class="image-nav"></div>
-        </div>
-        <div class="puppy-info">
-          <div class="puppy-header">
-            <div class="puppy-name">Max</div>
-            <div class="puppy-price">$900</div>
-          </div>
-          <div class="puppy-details">
-            <div class="puppy-detail"><strong>Age:</strong> 8 weeks</div>
-            <div class="puppy-detail"><strong>Gender:</strong> Male</div>
-          </div>
-          <div class="puppy-tags">
-            <span class="tag premium">Vet Checked</span>
-            <span class="tag">Family Raised</span>
-          </div>
-          <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">available</a>
-        </div>
-      </div>
+    <div class="grid grid-3" id="puppies-grid">
+      <!-- Puppies loaded dynamically from /data/puppies.json -->
+      <p style="text-align: center; grid-column: 1 / -1;">Loading puppies...</p>
     </div>
     <div style="text-align: center; margin-top: 3rem;">
       <a href="puppies.html" class="btn btn-secondary">View All Puppies</a>

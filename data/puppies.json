@@ -1,0 +1,37 @@
+{
+  "puppies": [
+    {
+      "name": "Jasper",
+      "price": "$800",
+      "age": "7 weeks",
+      "gender": "Male",
+      "description": "Healthy, playful, and well-socialized. Vet checked and family raised.",
+      "image": "/images/jasper-1.jpg",
+      "gallery": ["/images/jasper-1.jpg", "/images/jasper-2.jpg", "/images/jasper-3.jpg"],
+      "tags": ["Vet Checked", "Family Raised"],
+      "available": true
+    },
+    {
+      "name": "Lilo",
+      "price": "$800",
+      "age": "6 weeks",
+      "gender": "Female",
+      "description": "Perfect health guarantees and documentation. Professional and highly recommended.",
+      "image": "/images/lilo-1.jpg",
+      "gallery": ["/images/lilo-1.jpg", "/images/lilo-2.jpg", "/images/lilo-3.jpg"],
+      "tags": ["Vet Checked", "Family Raised"],
+      "available": true
+    },
+    {
+      "name": "Max",
+      "price": "$900",
+      "age": "8 weeks",
+      "gender": "Male",
+      "description": "Transparent breeder with lifetime support. Everything we hoped for.",
+      "image": "/images/max-1.jpg",
+      "gallery": ["/images/max-1.jpg", "/images/max-2.jpg", "/images/max-3.jpg"],
+      "tags": ["Vet Checked", "Family Raised"],
+      "available": true
+    }
+  ]
+}
