@@ -289,7 +289,7 @@ nav {
   z-index: 2;
   max-width: 800px;
   color: white;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 .hero h1 {
@@ -306,6 +306,34 @@ nav {
     min-height: 70vh;
     background-attachment: scroll;
   }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-content > p {
+    font-size: 0.95rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .hero-buttons {
+    gap: 0.75rem;
+  }
+
+  .hero .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-content {
+    padding: 0 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -313,6 +341,36 @@ nav {
     height: 60vh;
     min-height: 60vh;
     background-attachment: scroll;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero .subtitle {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content > p {
+    font-size: 0.85rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .hero-buttons {
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+
+  .hero .btn {
+    padding: 0.65rem 1.2rem;
+    font-size: 0.85rem;
+    width: 100%;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
   }
 }
 
