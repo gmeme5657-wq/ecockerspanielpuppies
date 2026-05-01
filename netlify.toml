@@ -2,11 +2,21 @@
   command = "echo 'Static site - no build needed'"
   publish = "."
 
-# Redirect all 404s to index.html for SPA compatibility
+# Clean URL redirects (so sitemap URLs resolve to the correct HTML files)
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  from = "/about"
+  to = "/about.html"
+  status = 301
+
+[[redirects]]
+  from = "/puppies"
+  to = "/puppies.html"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 301
 
 # Redirect admin to admin/index.html
 [[redirects]]

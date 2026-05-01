@@ -5,6 +5,7 @@
       "price": "$800",
       "age": "7 weeks",
       "gender": "Male",
+      "color": "Red",
       "description": "Healthy, playful, and well-socialized. Vet checked and family raised.",
       "image": "/images/jasper-1.jpg",
       "gallery": [
@@ -23,6 +24,7 @@
       "price": "$800",
       "age": "6 weeks",
       "gender": "Female",
+      "color": "Golden",
       "description": "Perfect health guarantees and documentation. Professional and highly recommended.",
       "image": "/images/lilo-1.jpg",
       "gallery": [
@@ -41,6 +43,7 @@
       "price": "$900",
       "age": "8 weeks",
       "gender": "Male",
+      "color": "Black and Tan",
       "description": "Transparent breeder with lifetime support. Everything we hoped for.",
       "image": "/images/max-1.jpg",
       "gallery": [
@@ -59,6 +62,7 @@
       "price": "$900",
       "age": "8 weeks",
       "gender": "Female",
+      "color": "Golden Red",
       "description": "Sweet and gentle female with excellent socialisation. Ready for her forever home with all first shots completed.",
       "image": "/images/alice-1.JPG",
       "gallery": [
@@ -77,6 +81,7 @@
       "price": "$850",
       "age": "7 weeks",
       "gender": "Male",
+      "color": "Black",
       "description": "Charming and outgoing male puppy. Loves playtime and socialization. Perfect for active families.",
       "image": "/images/archie-1.JPG",
       "gallery": [
@@ -95,6 +100,7 @@
       "price": "$750",
       "age": "6 weeks",
       "gender": "Male",
+      "color": "Red",
       "description": "Energetic and intelligent male puppy. Great with families. AKC registered and fully health checked.",
       "image": "/images/greg-1.jpg",
       "gallery": [
@@ -112,6 +118,7 @@
       "price": "$1000",
       "age": "7 weeks",
       "gender": "Female",
+      "color": "Black and Tan",
       "description": "Healthy, loving, and brings happiness every single day. Premium bloodline with excellent temperament.",
       "image": "/images/mabel-1.jpg",
       "gallery": [
