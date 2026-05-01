@@ -1,6 +1,9 @@
+site_url: https://ecockerspanielpuppies.com
+
 backend:
   name: git-gateway
   branch: main
+  identity_url: https://ecockerspanielpuppies.com/.netlify/identity
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
