@@ -1,0 +1,16 @@
+{
+  "name": "Mabel",
+  "price": 1000,
+  "age": "7 weeks",
+  "gender": "Female",
+  "color": "Black and Tan",
+  "status": "Available",
+  "description": "Healthy, loving, and brings happiness every single day. Premium bloodline with excellent temperament.",
+  "photo": "/assets/uploads/mabel.jpg",
+  "featured": true,
+  "family_raised": true,
+  "potty_trained": false,
+  "crate_trained": true,
+  "health_insurance": true,
+  "date": "2026-04-18T14:15:00Z"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Jasper",
+  "price": 800,
+  "age": "7 weeks",
+  "gender": "Male",
+  "color": "Red",
+  "status": "Available",
+  "description": "Healthy, playful, and well-socialized. Vet checked and family raised. Jasper brings joy to every family!",
+  "photo": "/assets/uploads/jasper.jpg",
+  "featured": true,
+  "family_raised": true,
+  "potty_trained": false,
+  "crate_trained": false,
+  "health_insurance": true,
+  "date": "2026-04-20T08:00:00Z"
+}

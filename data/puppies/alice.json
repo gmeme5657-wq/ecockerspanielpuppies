@@ -1,0 +1,16 @@
+{
+  "name": "Alice",
+  "price": 900,
+  "age": "8 weeks",
+  "gender": "Female",
+  "color": "Golden Red",
+  "status": "Available",
+  "description": "Sweet and gentle female with excellent socialisation. Ready for her forever home with all first shots completed.",
+  "photo": "/assets/uploads/alice.jpg",
+  "featured": true,
+  "family_raised": true,
+  "potty_trained": true,
+  "crate_trained": true,
+  "health_insurance": true,
+  "date": "2026-04-19T12:00:00Z"
+}

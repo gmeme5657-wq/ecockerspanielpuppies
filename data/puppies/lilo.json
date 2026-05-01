@@ -1,0 +1,16 @@
+{
+  "name": "Lilo",
+  "price": 800,
+  "age": "6 weeks",
+  "gender": "Female",
+  "color": "Golden",
+  "status": "Available",
+  "description": "Perfect health guarantees and documentation. Professional breeder practices. Highly recommended with lifetime support.",
+  "photo": "/assets/uploads/lilo.jpg",
+  "featured": true,
+  "family_raised": true,
+  "potty_trained": true,
+  "crate_trained": false,
+  "health_insurance": true,
+  "date": "2026-04-22T10:30:00Z"
+}

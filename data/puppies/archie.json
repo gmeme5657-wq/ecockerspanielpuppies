@@ -1,0 +1,16 @@
+{
+  "name": "Archie",
+  "price": 850,
+  "age": "7 weeks",
+  "gender": "Male",
+  "color": "Black",
+  "status": "Available",
+  "description": "Charming and outgoing male puppy. Loves playtime and socialization. Perfect for active families.",
+  "photo": "/assets/uploads/archie.jpg",
+  "featured": true,
+  "family_raised": true,
+  "potty_trained": false,
+  "crate_trained": false,
+  "health_insurance": true,
+  "date": "2026-04-21T11:20:00Z"
+}
