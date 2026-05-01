@@ -1,9 +1,8 @@
-site_url: https://ecockerspanielpuppies.com
-
 backend:
-  name: git-gateway
+  name: github
+  repo: gmeme5657-wq/ecockerspanielpuppies
   branch: main
-  identity_url: https://ecockerspanielpuppies.com/.netlify/identity
+  auth_scope: repo
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
