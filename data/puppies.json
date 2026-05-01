@@ -7,8 +7,15 @@
       "gender": "Male",
       "description": "Healthy, playful, and well-socialized. Vet checked and family raised.",
       "image": "/images/jasper-1.jpg",
-      "gallery": ["/images/jasper-1.jpg", "/images/jasper-2.jpg", "/images/jasper-3.jpg"],
-      "tags": ["Vet Checked", "Family Raised"],
+      "gallery": [
+        "/images/jasper-1.jpg",
+        "/images/jasper-2.jpg",
+        "/images/jasper-3.jpg"
+      ],
+      "tags": [
+        "Vet Checked",
+        "Family Raised"
+      ],
       "available": true
     },
     {
@@ -18,8 +25,15 @@
       "gender": "Female",
       "description": "Perfect health guarantees and documentation. Professional and highly recommended.",
       "image": "/images/lilo-1.jpg",
-      "gallery": ["/images/lilo-1.jpg", "/images/lilo-2.jpg", "/images/lilo-3.jpg"],
-      "tags": ["Vet Checked", "Family Raised"],
+      "gallery": [
+        "/images/lilo-1.jpg",
+        "/images/lilo-2.jpg",
+        "/images/lilo-3.jpg"
+      ],
+      "tags": [
+        "Vet Checked",
+        "Family Raised"
+      ],
       "available": true
     },
     {
@@ -29,8 +43,86 @@
       "gender": "Male",
       "description": "Transparent breeder with lifetime support. Everything we hoped for.",
       "image": "/images/max-1.jpg",
-      "gallery": ["/images/max-1.jpg", "/images/max-2.jpg", "/images/max-3.jpg"],
-      "tags": ["Vet Checked", "Family Raised"],
+      "gallery": [
+        "/images/max-1.jpg",
+        "/images/max-2.jpg",
+        "/images/max-3.jpg"
+      ],
+      "tags": [
+        "Vet Checked",
+        "Family Raised"
+      ],
+      "available": true
+    },
+    {
+      "name": "Alice",
+      "price": "$900",
+      "age": "8 weeks",
+      "gender": "Female",
+      "description": "Sweet and gentle female with excellent socialisation. Ready for her forever home with all first shots completed.",
+      "image": "/images/alice-1.JPG",
+      "gallery": [
+        "/images/alice-1.JPG",
+        "/images/alice-2.JPG",
+        "/images/alice-3.JPG"
+      ],
+      "tags": [
+        "Vet Checked",
+        "Family Raised"
+      ],
+      "available": true
+    },
+    {
+      "name": "Archie",
+      "price": "$850",
+      "age": "7 weeks",
+      "gender": "Male",
+      "description": "Charming and outgoing male puppy. Loves playtime and socialization. Perfect for active families.",
+      "image": "/images/archie-1.JPG",
+      "gallery": [
+        "/images/archie-1.JPG",
+        "/images/archie-2.JPG",
+        "/images/archie-3.JPG"
+      ],
+      "tags": [
+        "Vet Checked",
+        "Family Raised"
+      ],
+      "available": true
+    },
+    {
+      "name": "Greg",
+      "price": "$750",
+      "age": "6 weeks",
+      "gender": "Male",
+      "description": "Energetic and intelligent male puppy. Great with families. AKC registered and fully health checked.",
+      "image": "/images/greg-1.jpg",
+      "gallery": [
+        "/images/greg-1.jpg",
+        "/images/greg-2.jpg"
+      ],
+      "tags": [
+        "Vet Checked",
+        "Family Raised"
+      ],
+      "available": true
+    },
+    {
+      "name": "Mabel",
+      "price": "$1000",
+      "age": "7 weeks",
+      "gender": "Female",
+      "description": "Healthy, loving, and brings happiness every single day. Premium bloodline with excellent temperament.",
+      "image": "/images/mabel-1.jpg",
+      "gallery": [
+        "/images/mabel-1.jpg",
+        "/images/mabel-2.jpg",
+        "/images/mabel-3.jpg"
+      ],
+      "tags": [
+        "Vet Checked",
+        "Family Raised"
+      ],
       "available": true
     }
   ]
