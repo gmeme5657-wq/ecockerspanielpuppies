@@ -1,0 +1,16 @@
+{
+  "name": "Luna",
+  "price": 1350,
+  "age": "10 weeks",
+  "gender": "Female",
+  "color": "Red",
+  "status": "Available",
+  "description": "Sweet and gentle female, excellent with families. AKC registered, all vaccinations current.",
+  "photo": "/assets/uploads/luna.jpg",
+  "featured": true,
+  "family_raised": true,
+  "potty_trained": true,
+  "crate_trained": true,
+  "health_insurance": true,
+  "date": "2026-04-28T14:30:00Z"
+}

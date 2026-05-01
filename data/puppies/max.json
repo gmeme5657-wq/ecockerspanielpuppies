@@ -1,0 +1,16 @@
+{
+  "name": "Max",
+  "price": 1200,
+  "age": "9 weeks",
+  "gender": "Male",
+  "color": "Black and Tan",
+  "status": "Reserved",
+  "description": "Playful and energetic male with excellent bloodlines. Ready for training and bonding.",
+  "photo": "/assets/uploads/max.jpg",
+  "featured": true,
+  "family_raised": true,
+  "potty_trained": false,
+  "crate_trained": false,
+  "health_insurance": true,
+  "date": "2026-04-25T09:15:00Z"
+}
