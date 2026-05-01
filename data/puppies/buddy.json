@@ -1,0 +1,12 @@
+{
+  "name": "Buddy",
+  "price": 1200,
+  "age": "8 weeks",
+  "gender": "Male",
+  "color": "Golden",
+  "status": "Available",
+  "description": "AKC registered male, playful, vet-checked, first shots done.",
+  "photo": "/assets/uploads/buddy.jpg",
+  "featured": true,
+  "date": "2026-05-01T10:00:00Z"
+}

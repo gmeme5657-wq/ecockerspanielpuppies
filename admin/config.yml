@@ -8,30 +8,19 @@ public_folder: "/assets/uploads"
 collections:
   - name: "puppies"
     label: "Puppies"
-    folder: "data"
-    file: "puppies.json"
+    folder: "data/puppies"
+    create: true
+    slug: "{{fields.name}}-{{slug}}"
+    extension: "json"
     format: "json"
-    editor:
-      preview: false
     fields:
-      - name: puppies
-        label: Puppies
-        widget: list
-        fields:
-          - { name: name, label: Name, widget: string, required: true }
-          - { name: price, label: Price, widget: string, required: true, pattern: ['^\$\d+', "Price must start with $ (e.g., $800)"] }
-          - { name: age, label: Age, widget: string, required: true, hint: "e.g., 7 weeks" }
-          - { name: gender, label: Gender, widget: select, options: ["Male", "Female"], required: true }
-          - { name: description, label: Description, widget: text, required: true }
-          - { name: image, label: Main Image, widget: image, required: true }
-          - name: gallery
-            label: Gallery
-            widget: list
-            field: { label: Image, name: image, widget: image }
-            required: false
-          - name: tags
-            label: Tags
-            widget: list
-            field: { label: Tag, name: tag, widget: string }
-            default: ["Vet Checked", "Family Raised"]
-          - { name: available, label: Available, widget: boolean, default: true }
+      - {label: "Puppy Name", name: "name", widget: "string", required: true}
+      - {label: "Price USD", name: "price", widget: "number", value_type: "int", required: true}
+      - {label: "Age", name: "age", widget: "string", hint: "e.g. 8 weeks", required: true}
+      - {label: "Gender", name: "gender", widget: "select", options: ["Male", "Female"], required: true}
+      - {label: "Color", name: "color", widget: "string"}
+      - {label: "Status", name: "status", widget: "select", options: ["Available", "Reserved", "Sold"], default: "Available"}
+      - {label: "Description", name: "description", widget: "text", required: true}
+      - {label: "Main Photo", name: "photo", widget: "image", required: true}
+      - {label: "Featured on Homepage", name: "featured", widget: "boolean", default: true}
+      - {label: "Date Added", name: "date", widget: "datetime", default: "{{now}}"}
