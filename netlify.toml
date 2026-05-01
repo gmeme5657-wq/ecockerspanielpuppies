@@ -21,11 +21,40 @@
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "SAMEORIGIN"
     X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
 
+# HTML files - no cache
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    Content-Type = "text/html; charset=utf-8"
+
+# CSS and JS files - cache for 30 days
+[[headers]]
+  for = "/(css|js)/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000, immutable"
+
+# Image files - cache for 90 days
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=7776000, immutable"
+
+# JSON files - no cache
 [[headers]]
   for = "/data/*"
   [headers.values]
     Cache-Control = "no-cache"
+    Content-Type = "application/json"
+
+# Sitemap and robots - cache for 7 days
+[[headers]]
+  for = "/(sitemap.xml|robots.txt)"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
 
 [[headers]]
   for = "/admin/*"
