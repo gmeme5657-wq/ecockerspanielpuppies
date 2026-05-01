@@ -8,5 +8,9 @@
   "description": "AKC registered male, playful, vet-checked, first shots done.",
   "photo": "/assets/uploads/buddy.jpg",
   "featured": true,
+  "family_raised": true,
+  "potty_trained": false,
+  "crate_trained": false,
+  "health_insurance": true,
   "date": "2026-05-01T10:00:00Z"
 }

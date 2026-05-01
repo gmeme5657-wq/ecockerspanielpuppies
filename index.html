@@ -414,7 +414,13 @@ async function loadPuppies() {
         <div style="padding: 1rem;">
           <h3 style="margin: 0.5rem 0;">${puppy.name} - $${puppy.price}</h3>
           <p style="margin: 0.25rem 0; font-size: 0.9rem;">${puppy.age} | ${puppy.gender} | <span style="color: ${puppy.status === 'Available' ? '#27ae60' : '#e74c3c'}; font-weight: bold;">${puppy.status}</span></p>
-          <p style="margin: 0.5rem 0; font-size: 0.9rem;">${puppy.description}</p>
+          <p style="margin: 0.5rem 0; font-size: 0.9rem; color: #666;">${puppy.description}</p>
+          <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #e0e0e0; font-size: 0.85rem;">
+            ${puppy.family_raised ? '✓ Family Raised' : ''} 
+            ${puppy.potty_trained ? '✓ Potty Trained' : ''} 
+            ${puppy.crate_trained ? '✓ Crate Trained' : ''} 
+            ${puppy.health_insurance ? '✓ Health Insurance' : ''}
+          </div>
         </div>
       </div>
     `;

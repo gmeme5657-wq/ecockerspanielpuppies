@@ -26,4 +26,8 @@ collections:
       - {label: "Description", name: "description", widget: "text", required: true}
       - {label: "Main Photo", name: "photo", widget: "image", required: true}
       - {label: "Featured on Homepage", name: "featured", widget: "boolean", default: true}
+      - {label: "Family Raised", name: "family_raised", widget: "boolean", default: true}
+      - {label: "Potty Trained", name: "potty_trained", widget: "boolean", default: false}
+      - {label: "Crate Trained", name: "crate_trained", widget: "boolean", default: false}
+      - {label: "Health Insurance", name: "health_insurance", widget: "boolean", default: true}
       - {label: "Date Added", name: "date", widget: "datetime", default: "{{now}}"}
