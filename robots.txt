@@ -1,15 +1,3 @@
 User-agent: *
 Allow: /
-Allow: /css/
-Allow: /js/
-Allow: /images/
-Allow: /data/
-
-Disallow: /admin/
-Disallow: /.git/
-Disallow: /node_modules/
-
-Sitemap: https://www.ecockerspanielpuppies.com/sitemap.xml
-
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
+Sitemap: https://ecockerspanielpuppies.com/sitemap.xml
