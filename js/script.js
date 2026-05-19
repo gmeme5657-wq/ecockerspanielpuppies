@@ -802,7 +802,7 @@ function copyToClipboard(text) {
 
 // Open WhatsApp chat
 function openWhatsApp(message = '') {
-  const phoneNumber = '12252052770';
+  const phoneNumber = '13106849767';
   const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   window.open(url, '_blank');
 }
