@@ -396,57 +396,118 @@
 <!-- Load Puppies from GitHub API -->
 <script>
 async function loadPuppies() {
-  const res = await fetch('https://api.github.com/repos/gmeme5657-wq/ecockerspanielpuppies/contents/data/puppies');
-  const files = await res.json();
   const container = document.getElementById('puppies-grid');
+  if (!container) return;
   container.innerHTML = '';
-  
-  if (!Array.isArray(files)) {
-    container.innerHTML = '<p style="text-align: center; grid-column: 1 / -1;">No puppies available at the moment.</p>';
-    return;
-  }
-  
-  const puppiesData = [];
-  
-  for (let file of files) {
-    if (file.name.endsWith('.json') && file.name !== '.gitkeep') {
+
+  const localCandidates = [
+    'data/puppies.json',
+    './data/puppies.json',
+    '/data/puppies.json'
+  ];
+
+  const githubCandidates = [
+    'https://api.github.com/repos/gmeme5657-wq/ecockerspanielpuppies/contents/data/puppies',
+    'https://api.github.com/repos/gmeme5657-wq/ecockerspanielpuppies/contents/data/puppies?ref=main'
+  ];
+
+  async function fetchPuppiesFromSource(sourceUrls, sourceType) {
+    for (const sourceUrl of sourceUrls) {
       try {
-        const puppyData = await fetch(file.download_url).then(r => r.json());
-        if (puppyData.status === 'Available' || puppyData.status === 'Reserved') {
-          puppiesData.push(puppyData);
+        const response = await fetch(sourceUrl, { cache: 'no-store' });
+        if (!response.ok) continue;
+
+        const payload = await response.json();
+
+        if (sourceType === 'local') {
+          if (Array.isArray(payload?.puppies)) return payload.puppies;
+          if (Array.isArray(payload)) return payload;
+          continue;
         }
-      } catch (e) {
-        console.error('Error loading puppy:', file.name, e);
+
+        if (!Array.isArray(payload)) continue;
+
+        const puppiesData = [];
+        for (const file of payload) {
+          if (!file.name || !file.name.endsWith('.json') || file.name === '.gitkeep') continue;
+
+          try {
+            const puppyResponse = await fetch(file.download_url, { cache: 'no-store' });
+            if (!puppyResponse.ok) continue;
+            const puppyData = await puppyResponse.json();
+            if (puppyData && (puppyData.status === 'Available' || puppyData.status === 'Reserved')) {
+              puppiesData.push(puppyData);
+            }
+          } catch (error) {
+            console.error('Error loading puppy:', file.name, error);
+          }
+        }
+
+        puppiesData.sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
+        return puppiesData;
+      } catch (error) {
+        console.warn(`Unable to load puppies from ${sourceUrl}:`, error);
       }
     }
+
+    return null;
   }
-  
-  // Sort by date newest first
-  puppiesData.sort((a, b) => new Date(b.date) - new Date(a.date));
-  
-  if (puppiesData.length === 0) {
-    container.innerHTML = '<p style="text-align: center; grid-column: 1 / -1;">No puppies available at the moment.</p>';
-    return;
-  }
-  
-  for (let puppy of puppiesData) {
-    container.innerHTML += `
-      <div class="puppy-card">
-        <img src="${puppy.photo}" alt="${puppy.name}" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px 8px 0 0;">
-        <div style="padding: 1rem;">
-          <h3 style="margin: 0.5rem 0;">${puppy.name} - $${puppy.price}</h3>
-          <p style="margin: 0.25rem 0; font-size: 0.9rem;">${puppy.age} | ${puppy.gender} | <span style="color: ${puppy.status === 'Available' ? '#27ae60' : '#e74c3c'}; font-weight: bold;">${puppy.status}</span></p>
-          <p style="margin: 0.5rem 0; font-size: 0.9rem; color: #666;">${puppy.description}</p>
-          <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #e0e0e0; font-size: 0.85rem;">
-            ${puppy.family_raised ? '✓ Family Raised' : ''} 
-            ${puppy.potty_trained ? '✓ Potty Trained' : ''} 
-            ${puppy.crate_trained ? '✓ Crate Trained' : ''} 
-            ${puppy.health_insurance ? '✓ Health Insurance' : ''}
+
+  const localPuppies = await fetchPuppiesFromSource(localCandidates, 'local');
+  if (Array.isArray(localPuppies) && localPuppies.length > 0) {
+    const puppies = localPuppies.filter(puppy => puppy && (puppy.status === 'Available' || puppy.status === 'Reserved'));
+    if (puppies.length === 0) {
+      container.innerHTML = '<p style="text-align: center; grid-column: 1 / -1;">No puppies available at the moment.</p>';
+      return;
+    }
+
+    for (const puppy of puppies) {
+      const photo = puppy.photo || puppy.image || 'images/og-image.jpg';
+      container.innerHTML += `
+        <div class="puppy-card">
+          <img src="${photo}" alt="${puppy.name}" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px 8px 0 0;">
+          <div style="padding: 1rem;">
+            <h3 style="margin: 0.5rem 0;">${puppy.name} - $${puppy.price}</h3>
+            <p style="margin: 0.25rem 0; font-size: 0.9rem;">${puppy.age} | ${puppy.gender} | <span style="color: ${puppy.status === 'Available' ? '#27ae60' : '#e74c3c'}; font-weight: bold;">${puppy.status}</span></p>
+            <p style="margin: 0.5rem 0; font-size: 0.9rem; color: #666;">${puppy.description}</p>
+            <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #e0e0e0; font-size: 0.85rem;">
+              ${puppy.family_raised ? '✓ Family Raised' : ''} 
+              ${puppy.potty_trained ? '✓ Potty Trained' : ''} 
+              ${puppy.crate_trained ? '✓ Crate Trained' : ''} 
+              ${puppy.health_insurance ? '✓ Health Insurance' : ''}
+            </div>
           </div>
         </div>
-      </div>
-    `;
+      `;
+    }
+    return;
   }
+
+  const githubPuppies = await fetchPuppiesFromSource(githubCandidates, 'github');
+  if (githubPuppies && githubPuppies.length > 0) {
+    for (const puppy of githubPuppies) {
+      const photo = puppy.photo || puppy.image || 'images/og-image.jpg';
+      container.innerHTML += `
+        <div class="puppy-card">
+          <img src="${photo}" alt="${puppy.name}" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px 8px 0 0;">
+          <div style="padding: 1rem;">
+            <h3 style="margin: 0.5rem 0;">${puppy.name} - $${puppy.price}</h3>
+            <p style="margin: 0.25rem 0; font-size: 0.9rem;">${puppy.age} | ${puppy.gender} | <span style="color: ${puppy.status === 'Available' ? '#27ae60' : '#e74c3c'}; font-weight: bold;">${puppy.status}</span></p>
+            <p style="margin: 0.5rem 0; font-size: 0.9rem; color: #666;">${puppy.description}</p>
+            <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #e0e0e0; font-size: 0.85rem;">
+              ${puppy.family_raised ? '✓ Family Raised' : ''} 
+              ${puppy.potty_trained ? '✓ Potty Trained' : ''} 
+              ${puppy.crate_trained ? '✓ Crate Trained' : ''} 
+              ${puppy.health_insurance ? '✓ Health Insurance' : ''}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+    return;
+  }
+
+  container.innerHTML = '<p style="text-align: center; grid-column: 1 / -1;">No puppies available at the moment.</p>';
 }
 
 loadPuppies();

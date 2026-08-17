@@ -6,7 +6,7 @@
   "color": "Red",
   "status": "Available",
   "description": "Energetic and intelligent male puppy. Great with families. AKC registered and fully health checked.",
-  "photo": "/assets/uploads/greg.jpg",
+  "photo": "images/greg-1.jpg",
   "featured": true,
   "family_raised": true,
   "potty_trained": false,
