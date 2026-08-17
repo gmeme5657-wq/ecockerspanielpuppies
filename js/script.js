@@ -141,22 +141,128 @@ function initializeGalleries() {
 // LOAD PUPPIES FROM JSON
 // ============================================================================
 
+const fallbackPuppies = [
+  {
+    name: 'Jasper',
+    price: '$800',
+    age: '7 weeks',
+    gender: 'Male',
+    color: 'Red',
+    description: 'Healthy, playful, and well-socialized. Vet checked and family raised.',
+    image: '/images/jasper-1.jpg',
+    gallery: ['/images/jasper-1.jpg', '/images/jasper-2.jpg', '/images/jasper-3.jpg'],
+    tags: ['Vet Checked', 'Family Raised'],
+    available: true
+  },
+  {
+    name: 'Lilo',
+    price: '$800',
+    age: '9 weeks',
+    gender: 'Female',
+    color: 'Golden',
+    description: 'Perfect health guarantees and documentation. Professional and highly recommended.',
+    image: '/images/lilo-1.jpg',
+    gallery: ['/images/lilo-1.jpg', '/images/lilo-2.jpg', '/images/lilo-3.jpg'],
+    tags: ['Vet Checked', 'Family Raised'],
+    available: true
+  },
+  {
+    name: 'Max',
+    price: '$900',
+    age: '8 weeks',
+    gender: 'Male',
+    color: 'Black and Tan',
+    description: 'Transparent breeder with lifetime support. Everything we hoped for.',
+    image: '/images/max-1.jpg',
+    gallery: ['/images/max-1.jpg', '/images/max-2.jpg', '/images/max-3.jpg'],
+    tags: ['Vet Checked', 'Family Raised'],
+    available: true
+  },
+  {
+    name: 'Alice',
+    price: '$900',
+    age: '8 weeks',
+    gender: 'Female',
+    color: 'Golden Red',
+    description: 'Sweet and gentle female with excellent socialisation. Ready for her forever home with all first shots completed.',
+    image: '/images/alice-1.JPG',
+    gallery: ['/images/alice-1.JPG', '/images/alice-2.JPG', '/images/alice-3.JPG'],
+    tags: ['Vet Checked', 'Family Raised', 'Sold'],
+    available: false
+  },
+  {
+    name: 'Archie',
+    price: '$850',
+    age: '7 weeks',
+    gender: 'Male',
+    color: 'Black',
+    description: 'Charming and outgoing male puppy. Loves playtime and socialization. Perfect for active families.',
+    image: '/images/archie-1.JPG',
+    gallery: ['/images/archie-1.JPG', '/images/archie-2.JPG', '/images/archie-3.JPG'],
+    tags: ['Vet Checked', 'Family Raised'],
+    available: true
+  },
+  {
+    name: 'Greg',
+    price: '$750',
+    age: '6 weeks',
+    gender: 'Male',
+    color: 'Red',
+    description: 'Energetic and intelligent male puppy. Great with families. AKC registered and fully health checked.',
+    image: '/images/greg-1.jpg',
+    gallery: ['/images/greg-1.jpg', '/images/greg-2.jpg'],
+    tags: ['Vet Checked', 'Family Raised', 'Sold'],
+    available: false
+  },
+  {
+    name: 'Mabel',
+    price: '$1000',
+    age: '7 weeks',
+    gender: 'Female',
+    color: 'Black and Tan',
+    description: 'Healthy, loving, and brings happiness every single day. Premium bloodline with excellent temperament.',
+    image: '/images/mabel-1.jpg',
+    gallery: ['/images/mabel-1.jpg', '/images/mabel-2.jpg', '/images/mabel-3.jpg'],
+    tags: ['Vet Checked', 'Family Raised'],
+    available: true
+  }
+];
+
 /**
- * Fetches puppies data from /data/puppies.json
+ * Fetches puppies data from the local JSON file.
+ * Uses a page-relative path so it works both locally and on deployed folders.
+ * Falls back to bundled data when fetches are blocked by the browser.
  * @returns {Promise<Array>} Array of puppy objects
  */
 async function loadPuppies() {
-  try {
-    const response = await fetch('/data/puppies.json');
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+  const puppyDataUrls = [
+    new URL('./data/puppies.json', window.location.href).toString(),
+    new URL('../data/puppies.json', window.location.href).toString(),
+    'data/puppies.json',
+    '/data/puppies.json'
+  ];
+
+  for (const puppyUrl of puppyDataUrls) {
+    try {
+      const response = await fetch(puppyUrl, { cache: 'no-store' });
+      if (!response.ok) {
+        continue;
+      }
+      const data = await response.json();
+      if (Array.isArray(data.puppies)) {
+        return data.puppies;
+      }
+      if (Array.isArray(data)) {
+        return data;
+      }
+      return [];
+    } catch (error) {
+      console.warn(`Puppy data fetch failed for ${puppyUrl}:`, error.message || error);
     }
-    const data = await response.json();
-    return data.puppies || [];
-  } catch (error) {
-    console.error('Error loading puppies:', error);
-    return [];
   }
+
+  console.warn('Using bundled puppy fallback data because no puppy JSON source was accessible.');
+  return fallbackPuppies;
 }
 
 /**
@@ -171,8 +277,9 @@ function renderPuppyCards(puppies) {
 
   puppies.forEach(puppy => {
     const galleryImages = (puppy.gallery || [puppy.image]).join(',');
+    const isSold = puppy.available === false || puppy.status === 'Sold' || (Array.isArray(puppy.tags) && puppy.tags.includes('Sold'));
     const tagsHTML = (puppy.tags || [])
-      .map(tag => `<span class="tag ${tag === 'Vet Checked' ? 'premium' : ''}">${tag}</span>`)
+      .map(tag => `<span class="tag ${tag === 'Vet Checked' ? 'premium' : ''} ${tag === 'Sold' ? 'sold' : ''}">${tag}</span>`)
       .join('');
 
     const puppyCard = document.createElement('div');
@@ -199,7 +306,7 @@ function renderPuppyCards(puppies) {
         <div class="puppy-tags">
           ${tagsHTML}
         </div>
-        <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">available</a>
+        <a href="contact.html" class="btn ${isSold ? 'btn-secondary' : 'btn-primary'}" style="width: 100%; text-align: center; ${isSold ? 'background: #d9534f; border-color: #d9534f; color: #fff;' : ''}">${isSold ? 'Sold' : 'available'}</a>
       </div>
     `;
 

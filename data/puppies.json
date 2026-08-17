@@ -22,7 +22,7 @@
     {
       "name": "Lilo",
       "price": "$800",
-      "age": "6 weeks",
+      "age": "9 weeks",
       "gender": "Female",
       "color": "Golden",
       "description": "Perfect health guarantees and documentation. Professional and highly recommended.",
@@ -72,9 +72,10 @@
       ],
       "tags": [
         "Vet Checked",
-        "Family Raised"
+        "Family Raised",
+        "Sold"
       ],
-      "available": true
+      "available": false
     },
     {
       "name": "Archie",
@@ -91,9 +92,10 @@
       ],
       "tags": [
         "Vet Checked",
-        "Family Raised"
+        "Family Raised",
+        "Sold"
       ],
-      "available": true
+      "available": false
     },
     {
       "name": "Greg",
@@ -109,9 +111,10 @@
       ],
       "tags": [
         "Vet Checked",
-        "Family Raised"
+        "Family Raised",
+        "Sold"
       ],
-      "available": true
+      "available": false
     },
     {
       "name": "Mabel",

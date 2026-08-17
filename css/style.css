@@ -687,6 +687,12 @@ nav {
   color: var(--primary-gold);
 }
 
+.tag.sold {
+  background-color: rgba(217, 83, 79, 0.12);
+  color: #c62828;
+  font-weight: 700;
+}
+
 /* =============== LIGHTBOX =============== */
 .lightbox {
   display: none;
