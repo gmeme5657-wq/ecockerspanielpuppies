@@ -630,6 +630,30 @@ nav {
   padding: 1.5rem;
 }
 
+.status-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 72px;
+  border-radius: 16px;
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.status-pill.available {
+  background: rgba(212, 175, 55, 0.82);
+  color: #fff;
+}
+
+.status-pill.sold {
+  background: rgba(217, 83, 79, 0.88);
+  color: #fff;
+}
+
 .puppy-header {
   display: flex;
   justify-content: space-between;

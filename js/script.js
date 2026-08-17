@@ -295,6 +295,7 @@ function renderPuppyCards(puppies) {
         <div class="image-nav"></div>
       </div>
       <div class="puppy-info">
+        <div class="status-pill ${isSold ? 'sold' : 'available'}">${isSold ? 'Sold' : 'available'}</div>
         <div class="puppy-header">
           <div class="puppy-name">${puppy.name}</div>
           <div class="puppy-price">${puppy.price}</div>
@@ -306,7 +307,6 @@ function renderPuppyCards(puppies) {
         <div class="puppy-tags">
           ${tagsHTML}
         </div>
-        <a href="contact.html" class="btn ${isSold ? 'btn-secondary' : 'btn-primary'}" style="width: 100%; text-align: center; ${isSold ? 'background: #d9534f; border-color: #d9534f; color: #fff;' : ''}">${isSold ? 'Sold' : 'available'}</a>
       </div>
     `;
 
