@@ -411,6 +411,19 @@ async function loadPuppies() {
     'https://api.github.com/repos/gmeme5657-wq/ecockerspanielpuppies/contents/data/puppies?ref=main'
   ];
 
+  function getPuppyStatus(puppy) {
+    if (puppy && puppy.status) {
+      return puppy.status;
+    }
+    return puppy && puppy.available === false ? 'Sold' : 'Available';
+  }
+
+  function getStatusColor(status) {
+    if (status === 'Available') return '#27ae60';
+    if (status === 'Reserved') return '#f39c12';
+    return '#e74c3c';
+  }
+
   async function fetchPuppiesFromSource(sourceUrls, sourceType) {
     for (const sourceUrl of sourceUrls) {
       try {
@@ -435,7 +448,8 @@ async function loadPuppies() {
             const puppyResponse = await fetch(file.download_url, { cache: 'no-store' });
             if (!puppyResponse.ok) continue;
             const puppyData = await puppyResponse.json();
-            if (puppyData && (puppyData.status === 'Available' || puppyData.status === 'Reserved')) {
+            const puppyStatus = puppyData && getPuppyStatus(puppyData);
+            if (puppyData && ['Available', 'Reserved', 'Sold'].includes(puppyStatus)) {
               puppiesData.push(puppyData);
             }
           } catch (error) {
@@ -455,7 +469,10 @@ async function loadPuppies() {
 
   const localPuppies = await fetchPuppiesFromSource(localCandidates, 'local');
   if (Array.isArray(localPuppies) && localPuppies.length > 0) {
-    const puppies = localPuppies.filter(puppy => puppy && (puppy.status === 'Available' || puppy.status === 'Reserved'));
+    const puppies = localPuppies.filter(Boolean).map(puppy => ({
+      ...puppy,
+      status: getPuppyStatus(puppy)
+    }));
     if (puppies.length === 0) {
       container.innerHTML = '<p style="text-align: center; grid-column: 1 / -1;">No puppies available at the moment.</p>';
       return;
@@ -463,12 +480,13 @@ async function loadPuppies() {
 
     for (const puppy of puppies) {
       const photo = puppy.photo || puppy.image || 'images/og-image.jpg';
+      const status = getPuppyStatus(puppy);
       container.innerHTML += `
         <div class="puppy-card">
           <img src="${photo}" alt="${puppy.name}" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px 8px 0 0;">
           <div style="padding: 1rem;">
             <h3 style="margin: 0.5rem 0;">${puppy.name} - $${puppy.price}</h3>
-            <p style="margin: 0.25rem 0; font-size: 0.9rem;">${puppy.age} | ${puppy.gender} | <span style="color: ${puppy.status === 'Available' ? '#27ae60' : '#e74c3c'}; font-weight: bold;">${puppy.status}</span></p>
+            <p style="margin: 0.25rem 0; font-size: 0.9rem;">${puppy.age} | ${puppy.gender} | <span style="color: ${getStatusColor(status)}; font-weight: bold;">${status}</span></p>
             <p style="margin: 0.5rem 0; font-size: 0.9rem; color: #666;">${puppy.description}</p>
             <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #e0e0e0; font-size: 0.85rem;">
               ${puppy.family_raised ? '✓ Family Raised' : ''} 
@@ -487,12 +505,13 @@ async function loadPuppies() {
   if (githubPuppies && githubPuppies.length > 0) {
     for (const puppy of githubPuppies) {
       const photo = puppy.photo || puppy.image || 'images/og-image.jpg';
+      const status = getPuppyStatus(puppy);
       container.innerHTML += `
         <div class="puppy-card">
           <img src="${photo}" alt="${puppy.name}" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px 8px 0 0;">
           <div style="padding: 1rem;">
             <h3 style="margin: 0.5rem 0;">${puppy.name} - $${puppy.price}</h3>
-            <p style="margin: 0.25rem 0; font-size: 0.9rem;">${puppy.age} | ${puppy.gender} | <span style="color: ${puppy.status === 'Available' ? '#27ae60' : '#e74c3c'}; font-weight: bold;">${puppy.status}</span></p>
+            <p style="margin: 0.25rem 0; font-size: 0.9rem;">${puppy.age} | ${puppy.gender} | <span style="color: ${getStatusColor(status)}; font-weight: bold;">${status}</span></p>
             <p style="margin: 0.5rem 0; font-size: 0.9rem; color: #666;">${puppy.description}</p>
             <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #e0e0e0; font-size: 0.85rem;">
               ${puppy.family_raised ? '✓ Family Raised' : ''} 
