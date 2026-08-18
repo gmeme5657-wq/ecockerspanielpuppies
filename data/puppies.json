@@ -7,11 +7,11 @@
       "gender": "Male",
       "color": "Red",
       "description": "Healthy, playful, and well-socialized. Vet checked and family raised.",
-      "image": "/images/jasper-1.jpg",
+      "image": "images/jasper-1.jpg",
       "gallery": [
-        "/images/jasper-1.jpg",
-        "/images/jasper-2.jpg",
-        "/images/jasper-3.jpg"
+        "images/jasper-1.jpg",
+        "images/jasper-2.jpg",
+        "images/jasper-3.jpg"
       ],
       "tags": [
         "Vet Checked",
@@ -26,11 +26,11 @@
       "gender": "Female",
       "color": "Golden",
       "description": "Perfect health guarantees and documentation. Professional and highly recommended.",
-      "image": "/images/lilo-1.jpg",
+      "image": "images/lilo-1.jpg",
       "gallery": [
-        "/images/lilo-1.jpg",
-        "/images/lilo-2.jpg",
-        "/images/lilo-3.jpg"
+        "images/lilo-1.jpg",
+        "images/lilo-2.jpg",
+        "images/lilo-3.jpg"
       ],
       "tags": [
         "Vet Checked",
@@ -45,11 +45,11 @@
       "gender": "Male",
       "color": "Black and Tan",
       "description": "Transparent breeder with lifetime support. Everything we hoped for.",
-      "image": "/images/max-1.jpg",
+      "image": "images/max-1.jpg",
       "gallery": [
-        "/images/max-1.jpg",
-        "/images/max-2.jpg",
-        "/images/max-3.jpg"
+        "images/max-1.jpg",
+        "images/max-2.jpg",
+        "images/max-3.jpg"
       ],
       "tags": [
         "Vet Checked",
@@ -64,11 +64,11 @@
       "gender": "Female",
       "color": "Golden Red",
       "description": "Sweet and gentle female with excellent socialisation. Ready for her forever home with all first shots completed.",
-      "image": "/images/alice-1.JPG",
+      "image": "images/alice-1.JPG",
       "gallery": [
-        "/images/alice-1.JPG",
-        "/images/alice-2.JPG",
-        "/images/alice-3.JPG"
+        "images/alice-1.JPG",
+        "images/alice-2.JPG",
+        "images/alice-3.JPG"
       ],
       "tags": [
         "Vet Checked",
@@ -84,11 +84,11 @@
       "gender": "Male",
       "color": "Black",
       "description": "Charming and outgoing male puppy. Loves playtime and socialization. Perfect for active families.",
-      "image": "/images/archie-1.JPG",
+      "image": "images/archie-1.JPG",
       "gallery": [
-        "/images/archie-1.JPG",
-        "/images/archie-2.JPG",
-        "/images/archie-3.JPG"
+        "images/archie-1.JPG",
+        "images/archie-2.JPG",
+        "images/archie-3.JPG"
       ],
       "tags": [
         "Vet Checked",
@@ -104,10 +104,10 @@
       "gender": "Male",
       "color": "Red",
       "description": "Energetic and intelligent male puppy. Great with families. AKC registered and fully health checked.",
-      "image": "/images/greg-1.jpg",
+      "image": "images/greg-1.jpg",
       "gallery": [
-        "/images/greg-1.jpg",
-        "/images/greg-2.jpg"
+        "images/greg-1.jpg",
+        "images/greg-2.jpg"
       ],
       "tags": [
         "Vet Checked",
@@ -123,15 +123,69 @@
       "gender": "Female",
       "color": "Black and Tan",
       "description": "Healthy, loving, and brings happiness every single day. Premium bloodline with excellent temperament.",
-      "image": "/images/mabel-1.jpg",
+      "image": "images/mabel-1.jpg",
       "gallery": [
-        "/images/mabel-1.jpg",
-        "/images/mabel-2.jpg",
-        "/images/mabel-3.jpg"
+        "images/mabel-1.jpg",
+        "images/mabel-2.jpg",
+        "images/mabel-3.jpg"
       ],
       "tags": [
         "Vet Checked",
         "Family Raised"
+      ],
+      "available": true
+    },
+    {
+      "name": "Dax",
+      "price": "Contact",
+      "age": "9 weeks",
+      "gender": "Male",
+      "color": "Golden",
+      "description": "Playful and affectionate 9-week-old male puppy. Vet-checked and family raised. Ready for adoption.",
+      "image": "images/dax-1.jpg",
+      "gallery": [
+        "images/dax-1.jpg",
+        "images/dax-2.jpg",
+        "images/dax-3.jpg"
+      ],
+      "tags": [
+        "Available"
+      ],
+      "available": true
+    },
+    {
+      "name": "Luna",
+      "price": "Contact",
+      "age": "9 weeks",
+      "gender": "Female",
+      "color": "Black and Tan",
+      "description": "Sweet and calm 9-week-old female puppy. Vet-checked and family raised. Ready for adoption.",
+      "image": "images/luna-1.jpg",
+      "gallery": [
+        "images/luna-1.jpg",
+        "images/luna-2.jpg",
+        "images/luna-3.jpg"
+      ],
+      "tags": [
+        "Available"
+      ],
+      "available": true
+    },
+    {
+      "name": "Summer",
+      "price": "Contact",
+      "age": "9 weeks",
+      "gender": "Female",
+      "color": "Black",
+      "description": "Playful and sweet 9-week-old female puppy. Vet-checked and family raised. Ready for adoption.",
+      "image": "images/summer-1.jpg",
+      "gallery": [
+        "images/summer-1.jpg",
+        "images/summer-2.jpg",
+        "images/summer-3.jpg"
+      ],
+      "tags": [
+        "Available"
       ],
       "available": true
     }
