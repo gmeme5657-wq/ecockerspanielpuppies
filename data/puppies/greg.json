@@ -1,16 +1,18 @@
 {
   "name": "Greg",
   "price": 750,
-  "age": "6 weeks",
+  "age": "8 weeks",
   "gender": "Male",
   "color": "Red",
-  "status": "Available",
+  "status": "Sold",
   "description": "Energetic and intelligent male puppy. Great with families. AKC registered and fully health checked.",
   "photo": "images/greg-1.jpg",
   "featured": true,
   "family_raised": true,
-  "potty_trained": false,
-  "crate_trained": false,
+  "potty_trained": true,
+  "crate_trained": true,
   "health_insurance": true,
+  "microchipped": true,
+  "super_friendly": true,
   "date": "2026-04-23T09:45:00Z"
 }

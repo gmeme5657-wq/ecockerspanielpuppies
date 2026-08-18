@@ -1,7 +1,7 @@
 {
   "name": "Jasper",
   "price": 800,
-  "age": "7 weeks",
+  "age": "9 weeks",
   "gender": "Male",
   "color": "Red",
   "status": "Available",
@@ -9,8 +9,10 @@
   "photo": "images/jasper-1.jpg",
   "featured": true,
   "family_raised": true,
-  "potty_trained": false,
-  "crate_trained": false,
+  "potty_trained": true,
+  "crate_trained": true,
   "health_insurance": true,
+  "microchipped": true,
+  "super_friendly": true,
   "date": "2026-04-20T08:00:00Z"
 }

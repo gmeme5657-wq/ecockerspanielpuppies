@@ -3,7 +3,7 @@
     {
       "name": "Jasper",
       "price": "$800",
-      "age": "7 weeks",
+      "age": "9 weeks",
       "gender": "Male",
       "color": "Red",
       "description": "Healthy, playful, and well-socialized. Vet checked and family raised.",
@@ -15,7 +15,11 @@
       ],
       "tags": [
         "Vet Checked",
-        "Family Raised"
+        "Family Raised",
+        "Potty Trained",
+        "Super Friendly",
+        "Health Guarantee",
+        "Microchipped"
       ],
       "available": true
     },
@@ -34,15 +38,19 @@
       ],
       "tags": [
         "Vet Checked",
-        "Family Raised"
+        "Family Raised",
+        "Potty Trained",
+        "Super Friendly",
+        "Health Guarantee",
+        "Microchipped"
       ],
       "available": true
     },
     {
-      "name": "Max",
+      "name": "Nelly",
       "price": "$900",
-      "age": "8 weeks",
-      "gender": "Male",
+      "age": "9 weeks",
+      "gender": "Female",
       "color": "Black and Tan",
       "description": "Transparent breeder with lifetime support. Everything we hoped for.",
       "image": "images/max-1.jpg",
@@ -53,10 +61,15 @@
       ],
       "tags": [
         "Vet Checked",
-        "Family Raised"
+        "Family Raised",
+        "Potty Trained",
+        "Super Friendly",
+        "Health Guarantee",
+        "Microchipped"
       ],
       "available": true
     },
+
     {
       "name": "Alice",
       "price": "$900",
@@ -73,10 +86,15 @@
       "tags": [
         "Vet Checked",
         "Family Raised",
+        "Potty Trained",
+        "Super Friendly",
+        "Health Guarantee",
+        "Microchipped",
         "Sold"
       ],
       "available": false
     },
+
     {
       "name": "Archie",
       "price": "$850",
@@ -93,14 +111,19 @@
       "tags": [
         "Vet Checked",
         "Family Raised",
+        "Potty Trained",
+        "Super Friendly",
+        "Health Guarantee",
+        "Microchipped",
         "Sold"
       ],
       "available": false
     },
+
     {
       "name": "Greg",
       "price": "$750",
-      "age": "6 weeks",
+      "age": "8 weeks",
       "gender": "Male",
       "color": "Red",
       "description": "Energetic and intelligent male puppy. Great with families. AKC registered and fully health checked.",
@@ -112,10 +135,15 @@
       "tags": [
         "Vet Checked",
         "Family Raised",
+        "Potty Trained",
+        "Super Friendly",
+        "Health Guarantee",
+        "Microchipped",
         "Sold"
       ],
       "available": false
     },
+
     {
       "name": "Mabel",
       "price": "$1000",
@@ -131,31 +159,43 @@
       ],
       "tags": [
         "Vet Checked",
-        "Family Raised"
+        "Family Raised",
+        "Potty Trained",
+        "Super Friendly",
+        "Health Guarantee",
+        "Microchipped",
+        "Sold"
       ],
-      "available": true
+      "available": false
     },
+
     {
       "name": "Dax",
-      "price": "Contact",
+      "price": "$900",
       "age": "9 weeks",
       "gender": "Male",
       "color": "Golden",
       "description": "Playful and affectionate 9-week-old male puppy. Vet-checked and family raised. Ready for adoption.",
-      "image": "images/dax-1.jpg",
+      "image": "images/dax-3.jpg",
       "gallery": [
+        "images/dax-3.jpg",
         "images/dax-1.jpg",
-        "images/dax-2.jpg",
-        "images/dax-3.jpg"
+        "images/dax-2.jpg"
       ],
       "tags": [
+        "Vet Checked",
+        "Family Raised",
+        "Potty Trained",
+        "Super Friendly",
+        "Health Guarantee",
+        "Microchipped",
         "Available"
       ],
       "available": true
     },
     {
       "name": "Luna",
-      "price": "Contact",
+      "price": "$900",
       "age": "9 weeks",
       "gender": "Female",
       "color": "Black and Tan",
@@ -167,13 +207,19 @@
         "images/luna-3.jpg"
       ],
       "tags": [
+        "Vet Checked",
+        "Family Raised",
+        "Potty Trained",
+        "Super Friendly",
+        "Health Guarantee",
+        "Microchipped",
         "Available"
       ],
       "available": true
     },
     {
       "name": "Summer",
-      "price": "Contact",
+      "price": "$900",
       "age": "9 weeks",
       "gender": "Female",
       "color": "Black",
@@ -185,6 +231,12 @@
         "images/summer-3.jpg"
       ],
       "tags": [
+        "Vet Checked",
+        "Family Raised",
+        "Potty Trained",
+        "Super Friendly",
+        "Health Guarantee",
+        "Microchipped",
         "Available"
       ],
       "available": true

@@ -4,13 +4,16 @@
   "age": "7 weeks",
   "gender": "Female",
   "color": "Black and Tan",
-  "status": "Available",
+  "status": "Sold",
   "description": "Healthy, loving, and brings happiness every single day. Premium bloodline with excellent temperament.",
   "photo": "images/mabel-1.jpg",
   "featured": true,
   "family_raised": true,
-  "potty_trained": false,
+  "potty_trained": true,
   "crate_trained": true,
   "health_insurance": true,
+  "potty_trained": true,
+  "microchipped": true,
+  "super_friendly": true,
   "date": "2026-04-18T14:15:00Z"
 }
