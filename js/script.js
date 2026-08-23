@@ -145,7 +145,7 @@ const fallbackPuppies = [
   {
     name: 'Jasper',
     price: '$800',
-    age: '7 weeks',
+    age: '12 weeks',
     gender: 'Male',
     color: 'Red',
     description: 'Healthy, playful, and well-socialized. Vet checked and family raised.',
@@ -157,7 +157,7 @@ const fallbackPuppies = [
   {
     name: 'Lilo',
     price: '$800',
-    age: '9 weeks',
+    age: '12 weeks',
     gender: 'Female',
     color: 'Golden',
     description: 'Perfect health guarantees and documentation. Professional and highly recommended.',
@@ -169,7 +169,7 @@ const fallbackPuppies = [
   {
     name: 'Max',
     price: '$900',
-    age: '8 weeks',
+    age: '12 weeks',
     gender: 'Male',
     color: 'Black and Tan',
     description: 'Transparent breeder with lifetime support. Everything we hoped for.',
@@ -181,7 +181,7 @@ const fallbackPuppies = [
   {
     name: 'Alice',
     price: '$900',
-    age: '8 weeks',
+    age: '12 weeks',
     gender: 'Female',
     color: 'Golden Red',
     description: 'Sweet and gentle female with excellent socialisation. Ready for her forever home with all first shots completed.',
@@ -193,7 +193,7 @@ const fallbackPuppies = [
   {
     name: 'Archie',
     price: '$850',
-    age: '7 weeks',
+    age: '12 weeks',
     gender: 'Male',
     color: 'Black',
     description: 'Charming and outgoing male puppy. Loves playtime and socialization. Perfect for active families.',
@@ -205,7 +205,7 @@ const fallbackPuppies = [
   {
     name: 'Greg',
     price: '$750',
-    age: '6 weeks',
+    age: '12 weeks',
     gender: 'Male',
     color: 'Red',
     description: 'Energetic and intelligent male puppy. Great with families. AKC registered and fully health checked.',
@@ -217,7 +217,7 @@ const fallbackPuppies = [
   {
     name: 'Mabel',
     price: '$1000',
-    age: '7 weeks',
+    age: '12 weeks',
     gender: 'Female',
     color: 'Black and Tan',
     description: 'Healthy, loving, and brings happiness every single day. Premium bloodline with excellent temperament.',
